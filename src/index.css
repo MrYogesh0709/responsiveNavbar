@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: var(--text-color);
+  background-color: var(--background-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --text-color: rgba(255, 255, 255, 0.87);
+  --background-color: #242424;
+  --border-input: 5px;
+
+  --font-large: 2.125rem;
+  --font-medium: 1.2rem;
+}
+
+#root {
+  width: 100%;
+  padding: 20px;
+}
+
+h1 {
+  font-size: --font-large;
+  font-weight: bold;
+  line-height: 1;
+}
+
+p {
+  font-size: small;
+  color: lightcoral;
+}
+
+.d-flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-center {
+  justify-content: center;
+}
+.items-center {
+  align-items: center;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+.gap-2 {
+  gap: 2rem;
+}
+
+nav {
+  justify-content: space-between;
+}
+li {
+  list-style-type: none;
+  color: inherit;
+  cursor: pointer;
+}
+li:hover {
+  text-decoration: underline lightcoral;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.active-link {
+  color: lightgreen;
+}
+.profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: none;
+}
+img {
+  cursor: pointer;
+}
+
+.ul-big {
+  display: none;
+}
+.img-open {
+  display: block;
+}
+.img-open:hover {
+  scale: 1.1;
+  transition: scale 0.2s ease-in-out;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Initially hide the sidebar off the screen */
+  width: 250px;
+  height: 100%;
+  background-color: #242424;
+  transition: right 0.3s ease; /* Smooth transition effect for the sidebar */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.open {
+  right: 0;
+}
+.img-close:hover {
+  scale: 1.1;
+  transition: scale 0.2s ease-in-out;
+}
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+section {
+  margin: 4rem auto;
+}
+@media screen and (min-width: 768px) {
+  .ul-big,
+  .profile {
+    display: flex;
+  }
+
+  .img-open,
+  .sidebar {
+    display: none;
+  }
+}
