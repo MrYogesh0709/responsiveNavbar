@@ -23,3 +23,11 @@ Install my-project with npm
 - React-router-dom
 - Pure CSS
 - Responsive Navbar
+
+## 🚀 About Me
+I'm a full stack developer...
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at yogeshvanzara98@gmail.com
