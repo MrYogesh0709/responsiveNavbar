@@ -53,7 +53,10 @@ const Navbar = () => {
             <li key={item.id}>
               <NavLink
                 to={item.to}
-                onClick={() => handleActiveLink(item.name)}
+                onClick={() => {
+                  handleActiveLink(item.name);
+                  closeSidebar();
+                }}
                 className={`${activeLink === item.name ? "active-link" : ""}`}
               >
                 {item.name.toUpperCase()}
